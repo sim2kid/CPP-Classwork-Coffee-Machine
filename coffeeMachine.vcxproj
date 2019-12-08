@@ -151,7 +151,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Coffee.cpp" />
     <ClCompile Include="coffeeMachine.cpp" />
+    <ClCompile Include="CoffeeMaker.cpp" />
+    <ClCompile Include="Heater.cpp" />
+    <ClCompile Include="Hopper.cpp" />
+    <ClCompile Include="Reservoir.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Coffee.h" />
+    <ClInclude Include="CoffeeMaker.h" />
+    <ClInclude Include="Heater.h" />
+    <ClInclude Include="Hopper.h" />
+    <ClInclude Include="Reservoir.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
