@@ -60,10 +60,27 @@ std::string Coffee::toString() {
 	back += "\nThe Coffee's Brew is ";
 
 	if (*quality < 0) {
-		back += "Undercooked. (Raise the Brew Heat).";
+		if (*quality < 142) {
+			back += "... Frozen? Raise the Brew Heat A Lot).";
+		}
+		else if (*quality < 110) {
+			back += "Chilled and Not Cooked. (Raise the Brew Heat).";
+		}
+		else {
+			back += "Undercooked. (Raise the Brew Heat A Bit).";
+		}
 	}
 	else if (*quality > 0) {
-		back += "Overcooked. (Lower the Brew Heat).";
+		if (*quality > 200) {
+			back += "Vaporized! (Lower the Brew Heat A Lot)."; 
+		}
+		else if (*quality > 27) {
+			back += "Burnted. (Lower the Brew Heat).";
+		}
+		else {
+			back += "Overcooked. (Lower the Brew Heat A Bit).";
+		}
+		
 	}
 	else {
 		back += "Perfect!";

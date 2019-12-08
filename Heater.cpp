@@ -1,5 +1,6 @@
 #include "Heater.h"
-#include <synchapi.h>
+#include <chrono>
+#include <thread>
 //#include "pch.h"
 
 
@@ -14,7 +15,7 @@ void Heater::heatUp(int tempF) {
 		if (*temp > tempF) {
 			*temp = tempF;
 		}
-		Sleep(10);
+		std::this_thread::sleep_for(std::chrono::milliseconds(100)); // I wanted to raise this from 10 to 100 cus i thought it fit better this way.
 	}
 	return;
 }
@@ -25,7 +26,7 @@ void Heater::coolDown() {
 		if (*temp < 75) {
 			*temp = 75;
 		}
-		Sleep(10);
+		std::this_thread::sleep_for(std::chrono::milliseconds(10));
 	}
 	return;
 }
